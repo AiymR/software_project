@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+
+<div class="container">
+  <header class="jumbotron" style="margin-top: 100px;">
+    <div class="container">
+      <h1>Gogo power rangers!</h1>
+      <p>Real reviews and testimonials from our customers</p>
+      <p>
+        <a href="reviews/new" class="btn btn-primary lg">Add new reviews</a>
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <div class="row">
+    <% reviews.forEach(function(review){ %>
+      <div class="col-ms-3 col-sm-4">
+          <div class="card" style="width:20rem; height:22rem;">
+            <img class="card-img-top" src="<%= review.image %>" style="height:15rem;">
+            <div class="card-body"  style="text-align:center;">
+              <h4 class="card-title">  <%= review.name %> </h4>
+            </div>
+            <p>
+              <a href="/reviews/<%=review._id %>" class="btn btn-primary btn-block">More info</a>
+            </p>
+          </div>
+
+
+      </div>
+    <%}); %>
+  </div>
+  </div>
+
+
+
+<% include ../partials/footer %>

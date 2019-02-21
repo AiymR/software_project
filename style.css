@@ -1,0 +1,71 @@
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/home.jpg');
+  background-position: center center;
+  background-origin: content-box;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  position: absolute;
+}
+h1{
+  font-family: "lobster", cursive;
+  font-size: 90px;
+  color: white;
+  text-align: center;
+  padding-top: 6rem;
+  text-shadow: 2px 2px #072A46;
+}
+.content {
+
+      position: absolute;
+
+      top: 100%;
+
+      width: 100%;
+
+      height: 55rem;
+
+      background: white;
+
+    }
+p {
+  font-size: 22px;
+}
+.img-circle {
+  border-radius: 50%;
+}
+
+/**/
+.nav {
+  transition: padding 0.5s, color 0.5s;
+}
+.navbar-transparent {
+  background: transparent;
+  padding: 15px 0 15px 0;
+  border: none;
+}
+
+.navbar {
+    width: auto;
+}
+
+
+
+.navbar-transparent a {
+  color: white !important;
+}
+
+#navitems a:hover {
+  color: black !important;
+}

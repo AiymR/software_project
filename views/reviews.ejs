@@ -1,0 +1,65 @@
+<% include partials/header %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">Weather</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="text.html">Text</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="contacts.html">About us</a>
+  </li>
+
+    <li class="nav-item">
+    <a class="nav-link " href="product.html"> Product </a>
+  </li>
+
+</ul>
+<a href="#" data-toggle="modal" data-target="#login-modal" class="btn navbar-btn btn-ghost"><i class="fa fa-sign-in"></i>Log in</a>
+</div>
+</nav>
+
+
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Choose your weather</h1>
+      <p>Real reviews and testimonials from our customers</p>
+      <p>
+        <a href="reviews/new" class="btn btn-primary lg">Add new reviews</a>
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <div class="row">
+    <% reviews.forEach(function(review){ %>
+      <div class="col-ms-3 col-sm-4">
+          <div class="card" style="width:20rem;">
+            <img class="card-img-top" src="<%= review.image %>" style="height:15rem;">
+            <div class="card-body"  style="text-align:center; height=15rem;">
+              <h4 class="card-title" style="font-size:15px;">  <%= review.name %> </h4>
+            </div>
+            <p>
+              <a href="/reviews/<%= review._id %>reviews/" class="btn btn-primary btn-block">More info</a>
+            </p>
+          </div>
+
+
+      </div>
+    <%}); %>
+  </div>
+  </div>
+
+
+
+<% include partials/footer %>
